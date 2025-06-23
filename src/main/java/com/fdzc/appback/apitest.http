@@ -1,0 +1,19 @@
+### Send POST request with json body
+POST http://localhost:8888/appInfo/page?pageNum=1
+Content-Type: application/json
+
+{
+
+}
+
+### GET request with a header
+GET http://localhost:8888/appCategory/tree
+Accept: application/json
+
+### Send POST request with json body
+POST http://localhost:8888/devUser/page?pageNum=1
+Content-Type: application/json
+
+{
+
+}

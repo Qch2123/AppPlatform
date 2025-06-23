@@ -1,0 +1,35 @@
+server:
+  port: 8888
+
+upload:
+  path: D:/手游管理平台/logo/
+
+uploadApkFile:
+  path: D:/手游管理平台/apk/
+
+
+spring:
+  resources:
+    static-locations:
+      file:${upload.path},
+      classpath:/META-INF/resources/,
+      classpath:/resources/,
+      classpath:/static/,
+      classpath:/public/
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/game_admin?useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: qch
+  servlet:
+    multipart:
+      max-file-size: -1
+      max-request-size: -1
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com/fdzc/appback/entity
+
+logging:
+  level:
+    com.fdzc.lostfoundback.mapper: DEBUG
